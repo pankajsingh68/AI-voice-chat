@@ -18,12 +18,7 @@ export default function AudioRecorder() {
 
   const startRecording = useCallback(async () => {
     try {
-      // Connect WebSocket if not already
-      if (status !== 'connected') {
-        connect()
-        await new Promise(r => setTimeout(r, 800))
-      }
-
+      // 1. Immediately request microphone access (Safari blocks this if delayed!)
       const stream = await navigator.mediaDevices.getUserMedia({
         audio: {
           echoCancellation: true,
@@ -32,6 +27,12 @@ export default function AudioRecorder() {
         },
       })
       streamRef.current = stream
+
+      // 2. Connect WebSocket if not already
+      if (status !== 'connected') {
+        connect()
+        await new Promise(r => setTimeout(r, 800))
+      }
 
       // Start VAD analyser on the same stream
       startVAD(stream)
