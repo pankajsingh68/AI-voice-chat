@@ -25,9 +25,14 @@ load_dotenv()
 
 app = FastAPI(title="EchoCoach API", version="1.0.0")
 
+origins = [
+    "http://localhost:5173",
+    "https://ai-voice-chat-pankaj.vercel.app", # Replace with your actual URL
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:5173"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
