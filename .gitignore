@@ -1,0 +1,25 @@
+# ─── General ───
+.DS_Store
+.env
+*.log
+
+# ─── Node / Frontend ───
+node_modules/
+dist/
+coverage/
+
+# ─── Python / Backend ───
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+.eggs/
+
+# ─── IDE ───
+.idea/
+.vscode/
+*.swp
+*.swo
