@@ -2,7 +2,7 @@ import { createContext, useContext, useState, useRef, useCallback, useEffect } f
 
 const SessionContext = createContext(null)
 
-const WS_URL = import.meta.env.VITE_WS_URL || 'ws://localhost:8000/ws/coaching'
+const WS_URL = import.meta.env.VITE_WS_URL || 'wss://ai-voice-chat-1-i45v.onrender.com/ws/coaching'
 
 export function SessionProvider({ children }) {
   const [sessionId, setSessionId] = useState(null)
