@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Voice Chat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>&#127897;&#65039; AI Voice Chat</h1>
+      <p class="subtitle">VAD-powered — speaks when you do</p>
+    </header>
+
+    <div class="chat-container" id="chatContainer">
+      <div class="message assistant">
+        <div class="bubble">
+          Hello! I&#8217;m your AI voice assistant. Press the microphone button and start speaking — I&#8217;ll reply automatically.
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="visualizer">
+        <canvas id="waveform" width="320" height="56"></canvas>
+      </div>
+      <p class="status" id="status">Click to start</p>
+      <button id="micBtn" class="mic-btn" aria-label="Toggle microphone">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+          <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+        </svg>
+      </button>
+      <p class="hint">VAD auto-detects speech &middot; silence stops recording</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
