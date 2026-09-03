@@ -133,7 +133,7 @@ FastAPI Backend (Python)
 
 - **Python 3.10+**
 - **Node.js 18+**
-- **OpenAI API Key** with access to `whisper-1` and `gpt-4o`
+- **OpenAI API Key** with. access to `whisper-1` and `gpt-4o`
 
 ### 1. Backend Setup
 
